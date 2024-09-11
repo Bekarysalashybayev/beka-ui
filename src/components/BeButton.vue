@@ -5,16 +5,16 @@
 <script setup lang="ts">
 import {PropType} from "vue";
 
-defineProps({
-  variant: {
-    type: String as PropType<'primary' | 'secondary'>,
-    default: 'primary',
-  },
-  size: {
-    type: String as PropType<'s' | 'm' | 'l'>,
-    default: 'm',
-  }
-});
+type SizeType = 's' | 'm' | 'l'
+type VariantType = 'primary' | 'secondary'
+
+withDefaults(defineProps<{
+  variant?: VariantType,
+  size?: SizeType,
+}>(), {
+  variant: 'primary',
+  size: 'm'
+})
 </script>
 
 <style scoped>

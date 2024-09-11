@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <be-button variant="primary"></be-button>
+    <be-button variant="primary" size="s"></be-button>
   </header>
 </template>
 
