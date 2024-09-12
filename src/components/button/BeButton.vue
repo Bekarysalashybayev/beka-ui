@@ -3,8 +3,6 @@
 </template>
 
 <script setup lang="ts">
-import {PropType} from "vue";
-
 type SizeType = 's' | 'm' | 'l'
 type VariantType = 'primary' | 'secondary'
 
