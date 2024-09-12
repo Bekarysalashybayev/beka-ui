@@ -1,15 +1,13 @@
 <template>
-  <button :class="['button', `button_${variant}`, `button_${size}`]">Beka Button</button>
+  <button :class="['button', `button_${variant}`, `button_${size}`]">
+    <slot />
+  </button>
 </template>
 
 <script setup lang="ts">
-type SizeType = 's' | 'm' | 'l'
-type VariantType = 'primary' | 'secondary'
+import {ButtonProps} from "./button.interface";
 
-withDefaults(defineProps<{
-  variant?: VariantType,
-  size?: SizeType,
-}>(), {
+withDefaults(defineProps<ButtonProps>(), {
   variant: 'primary',
   size: 'm'
 })

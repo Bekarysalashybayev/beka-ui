@@ -5,11 +5,10 @@
 </template>
 
 <script setup lang="ts">
-import BeButton from "./button/BeButton.vue";
+import {HeaderProps} from "./header.interface";
+import BeButton from "@/components/button/BeButton.vue";
 
-defineProps<{
-  direction: 'left' | 'right'
-}>()
+defineProps<HeaderProps>()
 </script>
 
 <style scoped>

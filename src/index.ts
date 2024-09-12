@@ -1,3 +1,4 @@
-import BeButton from './components/BeButton.vue';
+import BeButton from './components/button/BeButton.vue';
+import BeHeader from './components/header/BeHeader.vue';
 
-export { BeButton };
+export { BeButton, BeHeader };

@@ -1,7 +1,7 @@
 {
   "name": "beka-ui",
   "private": false,
-  "version": "1.0.5",
+  "version": "1.0.16",
   "type": "module",
   "main": "dist/beka-ui.cjs.js",
   "module": "dist/beka-ui.es.js",
