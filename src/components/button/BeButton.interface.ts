@@ -1,4 +1,5 @@
-export type SizeType = 's' | 'm' | 'l'
+const types = ['s', 'm', 'l'] as const
+export type SizeType =  (typeof types)[number]
 export type VariantType = 'primary' | 'secondary'
 
 export interface ButtonProps {

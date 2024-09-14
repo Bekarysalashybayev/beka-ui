@@ -5,8 +5,8 @@
 </template>
 
 <script setup lang="ts">
-import {HeaderProps} from "./header.interface";
-import BeButton from "@/components/button/BeButton.vue";
+import type {HeaderProps} from "./header.interface";
+import BeButton from "../button";
 
 defineProps<HeaderProps>()
 </script>

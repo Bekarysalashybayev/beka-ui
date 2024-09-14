@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import {ButtonProps} from "./button.interface";
+import type {ButtonProps} from "./BeButton.interface";
 
 withDefaults(defineProps<ButtonProps>(), {
   variant: 'primary',

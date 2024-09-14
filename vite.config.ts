@@ -1,15 +1,21 @@
-import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import { resolve } from 'path';
+import { resolve } from 'path'
+import { defineConfig } from 'vite'
+import vuePlugin from '@vitejs/plugin-vue'
+import dtsPlugin from 'vite-plugin-dts'
 
+// noinspection JSUnusedGlobalSymbols - suppresses "exported but not used" warning in WebStorm
 export default defineConfig({
-    plugins: [vue()],
+    plugins: [
+        vuePlugin(),
+        dtsPlugin({
+            insertTypesEntry: true,
+        }),
+    ],
     build: {
         lib: {
-            entry: resolve(__dirname, 'src/index.ts'),
-            name: 'BekaUI',
-            formats: ['es', 'cjs'],
-            fileName: (format) => `beka-ui.${format}.js`,
+            entry: resolve(__dirname, './src/index.ts'),
+            name: 'beka-ui',
+            formats: ['es', 'umd'],
         },
         rollupOptions: {
             external: ['vue'],
@@ -20,9 +26,4 @@ export default defineConfig({
             },
         },
     },
-    resolve: {
-        alias: {
-            '@': resolve(__dirname, 'src'),
-        },
-    },
-});
+})
